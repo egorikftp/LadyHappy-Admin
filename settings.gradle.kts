@@ -13,3 +13,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Ladyhappy-Admin"
 
 include(":desktop")
+include(":data")
