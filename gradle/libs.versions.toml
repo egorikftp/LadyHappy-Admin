@@ -1,7 +1,7 @@
 [versions]
-androidgradle = "7.2.0-beta01"
+androidgradle = "7.1.2"
 compose = "1.0.1"
-compose-jetbrains = "1.1.0-rc01"
+compose-jetbrains = "1.1.0"
 constraintlayout = "1.0.0-beta01"
 coroutines = "1.6.0-native-mt"
 decompose = "0.5.1"
@@ -10,10 +10,10 @@ kotlin = "1.6.10"
 moshi = "1.13.0"
 retrofit = "2.9.0"
 retrosheet = "2.0.0-beta03"
-voyager = "1.0.0-beta16"
 
 [libraries]
 plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "androidgradle" }
+plugin-compose-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-jetbrains" }
 plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-versions-gradle = "com.github.ben-manes:gradle-versions-plugin:0.41.0"
 
@@ -40,6 +40,3 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 retrofit-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 
 retrosheet = { module = "com.github.theapache64:retrosheet", version.ref = "retrosheet" }
-
-voyager-core = { module = "cafe.adriel.voyager:voyager-core", version.ref = "voyager" }
-voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }

@@ -2,7 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("kotlin-parcelize")
-    id("org.jetbrains.compose") version "1.1.0"
+    id("org.jetbrains.compose")
 }
 
 android {
