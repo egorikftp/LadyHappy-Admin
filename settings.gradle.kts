@@ -16,4 +16,5 @@ include(":desktop")
 
 include(":common:viewmodel")
 include(":common:network")
-include(":feature:root")
+
+include(":common:feature:root")

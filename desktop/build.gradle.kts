@@ -24,8 +24,7 @@ kotlin {
                 implementation(libs.decompose)
                 implementation(libs.decompose.extensions)
 
-                implementation(projects.feature.root)
-
+                implementation(projects.common.feature.root)
                 implementation(projects.common.network)
             }
         }
@@ -37,7 +36,7 @@ compose.desktop {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "Ladyhappy-Admin"
+            packageName = "Ladyhappy Admin Tools"
             packageVersion = "1.0.0"
         }
     }
