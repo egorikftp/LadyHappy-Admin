@@ -3,7 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.1.0-rc01"
+    id("org.jetbrains.compose") version "1.1.0"
 }
 
 group = "com.egoriku.ladyhappy"
@@ -21,7 +21,12 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.currentOs)
 
-                implementation(projects.data)
+                implementation(libs.decompose)
+                implementation(libs.decompose.extensions)
+
+                implementation(projects.feature.root)
+
+                implementation(projects.common.network)
             }
         }
     }
