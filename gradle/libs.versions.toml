@@ -1,4 +1,8 @@
 [versions]
+compileSdk = "32"
+minSdk = "21"
+targetSdk = "32"
+
 androidgradle = "7.1.2"
 compose = "1.0.1"
 compose-jetbrains = "1.1.0"
@@ -8,6 +12,7 @@ decompose = "0.5.1"
 koin = "3.2.0-beta-1"
 kotlin = "1.6.10"
 moshi = "1.13.0"
+mvikotlin = "2.0.4"
 retrofit = "2.9.0"
 retrosheet = "2.0.0-beta03"
 
@@ -17,11 +22,10 @@ plugin-compose-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin"
 plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-versions-gradle = "com.github.ben-manes:gradle-versions-plugin:0.41.0"
 
+androidx-activity-compose = "androidx.activity:activity-compose:1.4.0"
 androidx-appcompat = "androidx.appcompat:appcompat:1.4.1"
 androidx-core = "androidx.core:core-ktx:1.7.0"
 androidx-viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-
-compose-android-activity = "androidx.activity:activity-compose:1.4.0"
 
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-extensions = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
@@ -35,6 +39,9 @@ kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines
 
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+
+mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlin" }
+mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
 
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }

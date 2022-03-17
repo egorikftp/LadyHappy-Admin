@@ -36,18 +36,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.koin.core)
-                implementation(libs.kotlin.coroutines.core)
-                implementation(compose.desktop.common)
-            }
-        }
-
-        val androidMain by getting {
-            dependencies {
-                api(libs.androidx.viewmodel)
-                implementation(libs.koin.android)
-                implementation(libs.koin.compose)
-                implementation(libs.kotlin.coroutines.android)
+                implementation(compose.ui)
+                implementation(compose.material)
             }
         }
     }

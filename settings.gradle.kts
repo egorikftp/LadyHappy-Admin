@@ -12,9 +12,15 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "Ladyhappy-Admin"
 
+include(":android")
 include(":desktop")
 
 include(":common:viewmodel")
 include(":common:network")
+include(":common:theme")
 
-include(":common:feature:root")
+include(":common:feature-root")
+
+include(":common:feature-main")
+include(":common:feature-config")
+include(":common:feature-features")

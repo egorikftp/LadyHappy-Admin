@@ -9,5 +9,7 @@ actual open class KmmViewModel : ViewModel() {
     actual val viewModelScope: CoroutineScope
         get() = extViewModelScope
 
-    public actual override fun onCleared() = super.onCleared()
+    public actual override fun onCleared() = super.onCleared().also {
+        println("onClear")
+    }
 }

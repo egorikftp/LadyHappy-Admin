@@ -23,9 +23,12 @@ kotlin {
 
                 implementation(libs.decompose)
                 implementation(libs.decompose.extensions)
+                implementation(libs.koin.core)
 
-                implementation(projects.common.feature.root)
+                implementation(projects.common.featureRoot)
+
                 implementation(projects.common.network)
+                implementation(projects.common.theme)
             }
         }
     }
