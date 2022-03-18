@@ -37,6 +37,7 @@ dependencies {
 
     implementation(projects.common.featureRoot)
 
+    implementation(libs.android.material)
     implementation(libs.androidx.activity.compose)
     implementation(libs.decompose)
     implementation(libs.koin.core)

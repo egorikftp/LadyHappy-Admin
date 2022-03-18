@@ -30,9 +30,9 @@ kotlin {
             dependencies {
                 implementation(projects.common.viewmodel)
 
-                implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
+                implementation(compose.runtime)
 
                 implementation(libs.decompose)
                 implementation(libs.koin.core)

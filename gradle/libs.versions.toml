@@ -11,6 +11,7 @@ coroutines = "1.6.0-native-mt"
 decompose = "0.5.1"
 koin = "3.2.0-beta-1"
 kotlin = "1.6.10"
+material = "1.5.0"
 moshi = "1.13.0"
 mvikotlin = "2.0.4"
 retrofit = "2.9.0"
@@ -21,6 +22,8 @@ plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref
 plugin-compose-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-jetbrains" }
 plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-versions-gradle = "com.github.ben-manes:gradle-versions-plugin:0.41.0"
+
+android-material = { module = "com.google.android.material:material", version.ref = "material" }
 
 androidx-activity-compose = "androidx.activity:activity-compose:1.4.0"
 androidx-appcompat = "androidx.appcompat:appcompat:1.4.1"
