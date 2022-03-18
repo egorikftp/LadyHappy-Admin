@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="windowBackground">#FF1E1A1D</color>
+    <color name="immersive_sys_ui">#FF1E1A1D</color>
+</resources>

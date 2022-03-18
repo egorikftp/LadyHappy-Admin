@@ -2,6 +2,10 @@
 <resources>
 
     <style name="Theme.LadyhappyAdmin" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:colorPrimary">#FF1F0318</item>
+        <item name="android:colorAccent">#FF1F0318</item>
+        <item name="android:statusBarColor">@color/immersive_sys_ui</item>
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 </resources>
