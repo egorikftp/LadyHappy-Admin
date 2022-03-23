@@ -23,7 +23,7 @@ class MainComponentImpl(
 ) : MainComponent, KoinComponent, ComponentContext by componentContext {
 
     private val configComponent by inject<ConfigComponent> {
-        parametersOf(::goBack)
+        parametersOf(componentContext, ::goBack)
     }
 
     private val router = router<Configuration, Child>(

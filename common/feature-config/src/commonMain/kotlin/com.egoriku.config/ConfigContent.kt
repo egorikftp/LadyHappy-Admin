@@ -11,22 +11,14 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.egoriku.viewmodel.getViewModel
 
 @Composable
 fun ConfigContent(component: ConfigComponent) {
-    val viewModel = getViewModel<ConfigViewModel>()
-
-    val configResult by viewModel.resultStateFlow.collectAsState()
-
-    DisposableEffect(viewModel) {
-        onDispose(viewModel::onCleared)
-    }
+    val model by component.model.collectAsState(ConfigComponent.Model())
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         TopAppBar(
@@ -41,16 +33,15 @@ fun ConfigContent(component: ConfigComponent) {
             }
         )
 
-        when (val state: ConfigResult = configResult) {
-            is ConfigResult.Loading -> Text("Loading")
-            is ConfigResult.Success -> LazyColumn(modifier = Modifier.fillMaxSize()) {
-                val items = state.data
+        when (model.isLoading) {
+            true -> Text("Loading")
+            false -> LazyColumn(modifier = Modifier.fillMaxSize()) {
+                val items = model.categories
 
                 items(items) {
                     Text(it.toString())
                 }
             }
-            is ConfigResult.Error -> Text("Error")
         }
     }
 }

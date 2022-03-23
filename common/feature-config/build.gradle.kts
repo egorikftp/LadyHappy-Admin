@@ -36,6 +36,8 @@ kotlin {
 
                 implementation(libs.decompose)
                 implementation(libs.koin.core)
+                implementation(libs.mvikotlin)
+                implementation(libs.mvikotlin.coroutines)
             }
         }
     }

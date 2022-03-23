@@ -38,6 +38,8 @@ kotlin {
                 implementation(libs.decompose)
                 implementation(libs.decompose.extensions)
                 implementation(libs.koin.core)
+                implementation(libs.mvikotlin)
+                implementation(libs.mvikotlin.main)
             }
         }
     }
