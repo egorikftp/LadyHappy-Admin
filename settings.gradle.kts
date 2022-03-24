@@ -15,9 +15,9 @@ rootProject.name = "Ladyhappy-Admin"
 include(":android")
 include(":desktop")
 
-include(":common:viewmodel")
 include(":common:network")
 include(":common:theme")
+include(":common:utils")
 
 include(":common:feature-root")
 

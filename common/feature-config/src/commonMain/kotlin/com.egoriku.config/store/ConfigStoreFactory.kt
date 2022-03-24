@@ -5,7 +5,7 @@ import com.arkivanov.mvikotlin.core.store.SimpleBootstrapper
 import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.extensions.coroutines.SuspendExecutor
-import com.egoriku.config.AppCoroutineDispatcher
+import com.egoriku.utils.AppCoroutineDispatcher
 import com.egoriku.config.store.ConfigStore.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext

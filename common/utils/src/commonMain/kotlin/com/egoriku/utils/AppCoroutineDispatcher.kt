@@ -1,4 +1,4 @@
-package com.egoriku.config
+package com.egoriku.utils
 
 import kotlinx.coroutines.CoroutineDispatcher
 
