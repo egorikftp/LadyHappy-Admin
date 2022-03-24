@@ -7,6 +7,7 @@ import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.extensions.coroutines.states
 import com.egoriku.config.ConfigComponent.Model
 import com.egoriku.config.store.ConfigStore
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import org.koin.core.component.KoinComponent
@@ -17,10 +18,9 @@ internal class ConfigComponentImpl(
     private val onBack: () -> Unit
 ) : ConfigComponent, KoinComponent, ComponentContext by componentContext {
 
-    private val store = instanceKeeper.getStore {
-        get<ConfigStore>()
-    }
+    private val store = instanceKeeper.getStore { get<ConfigStore>() }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     override val model: Flow<Model> = store.states.map { state: ConfigStore.State ->
         Model(
             categories = state.items,

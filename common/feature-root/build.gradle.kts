@@ -28,7 +28,6 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(projects.common.featureConfig)
                 implementation(projects.common.featureMain)
 
                 implementation(compose.runtime)
