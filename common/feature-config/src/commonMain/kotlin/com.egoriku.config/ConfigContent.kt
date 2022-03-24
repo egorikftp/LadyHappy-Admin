@@ -36,7 +36,7 @@ fun ConfigContent(component: ConfigComponent) {
         when (model.isLoading) {
             true -> Text("Loading")
             false -> LazyColumn(modifier = Modifier.fillMaxSize()) {
-                val items = model.categories
+                val items = model.config
 
                 items(items) {
                     Text(it.toString())

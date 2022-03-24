@@ -1,5 +1,6 @@
 package com.egoriku.config
 
+import com.egoriku.config.domain.Config
 import kotlinx.coroutines.flow.Flow
 
 interface ConfigComponent {
@@ -10,6 +11,6 @@ interface ConfigComponent {
 
     data class Model(
         val isLoading: Boolean = false,
-        val categories: List<Int> = emptyList()
+        val config: List<Config> = emptyList()
     )
 }

@@ -2,7 +2,6 @@ package com.egoriku.network.koin
 
 import com.egoriku.network.ApiInterface
 import com.egoriku.network.Constants.TABLE_CATEGORIES
-import com.egoriku.network.flow.FlowResourceCallAdapterFactory
 import com.github.theapache64.retrosheet.RetrosheetInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -42,7 +41,6 @@ actual val dataModule = module {
             .client(get())
             .baseUrl("https://docs.google.com/spreadsheets/d/1XrYNW2hX4lMxMhd8rOFzk5vrjYlxg3WxEKPAqDMhB54/")
             .addConverterFactory(MoshiConverterFactory.create(get()))
-            .addCallAdapterFactory(FlowResourceCallAdapterFactory())
             .build()
     }
 

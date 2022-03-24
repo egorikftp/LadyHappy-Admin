@@ -23,7 +23,7 @@ internal class ConfigComponentImpl(
     @OptIn(ExperimentalCoroutinesApi::class)
     override val model: Flow<Model> = store.states.map { state: ConfigStore.State ->
         Model(
-            categories = state.items,
+            config = state.items,
             isLoading = state.isLoading
         )
     }

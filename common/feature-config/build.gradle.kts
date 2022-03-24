@@ -9,6 +9,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(projects.common.network)
                 implementation(projects.common.utils)
 
                 implementation(compose.runtime)
@@ -19,6 +20,11 @@ kotlin {
                 implementation(libs.koin.core)
                 implementation(libs.mvikotlin)
                 implementation(libs.mvikotlin.coroutines)
+            }
+        }
+
+        val jvmMain by getting {
+            dependencies {
             }
         }
     }

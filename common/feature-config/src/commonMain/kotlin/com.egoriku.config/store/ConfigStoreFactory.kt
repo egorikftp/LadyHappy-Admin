@@ -5,31 +5,14 @@ import com.arkivanov.mvikotlin.core.store.SimpleBootstrapper
 import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.extensions.coroutines.SuspendExecutor
-import com.egoriku.utils.AppCoroutineDispatcher
+import com.egoriku.config.repository.ConfigRepository
 import com.egoriku.config.store.ConfigStore.*
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.withContext
-
-class Repository {
-
-    suspend fun getConfig(): List<Int> {
-        return withContext(AppCoroutineDispatcher.IO) {
-            delay(4000)
-
-            List(100) { it + 1 }
-        }
-    }
-}
+import com.egoriku.utils.AppCoroutineDispatcher
 
 internal class ConfigStoreFactory(
-    private val storeFactory: StoreFactory
+    private val storeFactory: StoreFactory,
+    private val configRepository: ConfigRepository
 ) {
-
-    init {
-        println("kek: ConfigStoreFactory")
-    }
-
-    private val repository = Repository()
 
     fun create(): ConfigStore = object : ConfigStore,
         Store<Intent, State, Nothing> by storeFactory.create(
@@ -60,7 +43,7 @@ internal class ConfigStoreFactory(
 
         private suspend fun loadConfig() {
             dispatch(Result.Loading)
-            dispatch(Result.Loaded(repository.getConfig()))
+            dispatch(Result.Loaded(configRepository.loadConfig()))
         }
     }
 
