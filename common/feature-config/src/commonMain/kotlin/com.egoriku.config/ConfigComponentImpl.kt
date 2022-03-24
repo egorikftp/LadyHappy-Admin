@@ -31,7 +31,6 @@ internal class ConfigComponentImpl(
     override fun onCloseClicked() = onBack()
 }
 
-
 fun <T : Store<*, *, *>> InstanceKeeper.getStore(key: Any, factory: () -> T): T =
     getOrCreate(key) { StoreHolder(factory()) }
         .store

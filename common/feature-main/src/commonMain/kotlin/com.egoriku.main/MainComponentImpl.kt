@@ -15,28 +15,28 @@ import com.egoriku.main.MainComponent.Child
 import com.egoriku.main.MainComponentImpl.Configuration.Config
 import com.egoriku.main.MainComponentImpl.Configuration.Features
 import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
+import org.koin.core.component.get
 import org.koin.core.parameter.parametersOf
 
 class MainComponentImpl(
     componentContext: ComponentContext
 ) : MainComponent, KoinComponent, ComponentContext by componentContext {
 
-    private val configComponent by inject<ConfigComponent> {
-        parametersOf(componentContext, ::goBack)
-    }
-
     private val router = router<Configuration, Child>(
         initialConfiguration = Features,
         handleBackButton = true,
         key = "Main",
-        childFactory = { configuration, _ ->
+        childFactory = { configuration, componentContext ->
             when (configuration) {
                 is Features -> Child.Features(component = featuresComponent())
-                is Config -> Child.Config(component = configComponent)
+                is Config -> Child.Config(component = configComponent(componentContext))
             }
         }
     )
+
+    private fun configComponent(componentContext: ComponentContext) = get<ConfigComponent> {
+        parametersOf(componentContext, ::goBack)
+    }
 
     private fun goBack() {
         router.pop()
