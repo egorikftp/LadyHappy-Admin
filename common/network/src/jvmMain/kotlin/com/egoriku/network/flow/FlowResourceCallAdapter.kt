@@ -1,8 +1,8 @@
-package com.egoriku.ladyhapppy.network.flow
+package com.egoriku.network.flow
 
-import com.egoriku.ladyhapppy.Resource
-import com.egoriku.ladyhapppy.Resource.Error
-import com.egoriku.ladyhapppy.Resource.Success
+import com.egoriku.network.Resource
+import com.egoriku.network.Resource.Error
+import com.egoriku.network.Resource.Success
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow

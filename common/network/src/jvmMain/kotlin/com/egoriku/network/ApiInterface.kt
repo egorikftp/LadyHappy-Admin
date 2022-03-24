@@ -1,8 +1,7 @@
-package com.egoriku.ladyhapppy.network
+package com.egoriku.network
 
-import com.egoriku.ladyhapppy.Constants.TABLE_CATEGORIES
-import com.egoriku.ladyhapppy.Resource
-import com.egoriku.ladyhapppy.network.model.Config
+import com.egoriku.network.Constants.TABLE_CATEGORIES
+import com.egoriku.network.model.Config
 import com.github.theapache64.retrosheet.annotations.Read
 import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET

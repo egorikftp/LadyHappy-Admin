@@ -1,4 +1,4 @@
-package com.egoriku.ladyhapppy
+package com.egoriku.network
 
 sealed class Resource<T> {
 

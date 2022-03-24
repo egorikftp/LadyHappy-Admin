@@ -1,8 +1,8 @@
-package com.egoriku.ladyhapppy.network.koin
+package com.egoriku.network.koin
 
-import com.egoriku.ladyhapppy.Constants.TABLE_CATEGORIES
-import com.egoriku.ladyhapppy.network.ApiInterface
-import com.egoriku.ladyhapppy.network.flow.FlowResourceCallAdapterFactory
+import com.egoriku.network.ApiInterface
+import com.egoriku.network.Constants.TABLE_CATEGORIES
+import com.egoriku.network.flow.FlowResourceCallAdapterFactory
 import com.github.theapache64.retrosheet.RetrosheetInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -11,7 +11,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-val dataModule = module {
+actual val dataModule = module {
 
     single {
         OkHttpClient.Builder()

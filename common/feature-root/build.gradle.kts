@@ -29,6 +29,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(projects.common.featureMain)
+                implementation(projects.common.network)
 
                 implementation(compose.runtime)
                 implementation(compose.foundation)

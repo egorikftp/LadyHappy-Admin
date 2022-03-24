@@ -1,6 +1,6 @@
-package com.egoriku.ladyhapppy.network.flow
+package com.egoriku.network.flow
 
-import com.egoriku.ladyhapppy.Resource
+import com.egoriku.network.Resource
 import kotlinx.coroutines.flow.Flow
 import retrofit2.CallAdapter
 import retrofit2.CallAdapter.Factory
