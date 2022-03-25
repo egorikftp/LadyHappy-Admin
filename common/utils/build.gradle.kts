@@ -43,6 +43,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
+                implementation(libs.androidx.window)
                 implementation(libs.kotlin.coroutines.android)
             }
         }

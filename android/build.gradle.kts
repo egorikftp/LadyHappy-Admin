@@ -33,9 +33,10 @@ android {
 }
 
 dependencies {
-    implementation(projects.common.theme)
-
     implementation(projects.common.featureRoot)
+
+    implementation(projects.common.theme)
+    implementation(projects.common.utils)
 
     implementation(libs.android.material)
     implementation(libs.androidx.activity.compose)

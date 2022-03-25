@@ -21,6 +21,7 @@ kotlin {
             dependencies {
                 implementation(projects.common.featureRoot)
                 implementation(projects.common.theme)
+                implementation(projects.common.utils)
 
                 implementation(compose.desktop.currentOs)
 

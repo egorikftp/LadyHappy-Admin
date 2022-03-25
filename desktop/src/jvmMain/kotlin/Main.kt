@@ -8,7 +8,7 @@ import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import com.egoriku.root.RootComponentImpl
 import com.egoriku.root.RootContent
 import com.egoriku.root.koin.initKoin
-import com.egoriku.theme.LadyHappyAdminTheme
+import theme.LadyHappyDesktopTheme
 
 @OptIn(ExperimentalDecomposeApi::class)
 fun main() {
@@ -24,10 +24,11 @@ fun main() {
         LifecycleController(lifecycle, windowState)
 
         Window(
+            state = windowState,
             onCloseRequest = ::exitApplication,
             title = "LadyHappy Admin Console",
         ) {
-            LadyHappyAdminTheme {
+            LadyHappyDesktopTheme(windowState = windowState) {
                 RootContent(rootComponent = rootComponent)
             }
         }
