@@ -52,3 +52,5 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 retrofit-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 
 retrosheet = { module = "com.github.theapache64:retrosheet", version.ref = "retrosheet" }
+
+themedetector = "com.github.Dansoftowner:jSystemThemeDetector:3.6"

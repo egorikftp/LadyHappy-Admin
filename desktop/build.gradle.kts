@@ -28,6 +28,7 @@ kotlin {
                 implementation(libs.decompose)
                 implementation(libs.decompose.extensions)
                 implementation(libs.koin.core)
+                implementation(libs.themedetector)
             }
         }
     }
