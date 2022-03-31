@@ -10,7 +10,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(projects.common.retrosheetKmm)
+                implementation(projects.common.network)
                 implementation(projects.common.utils)
 
                 implementation(compose.runtime)

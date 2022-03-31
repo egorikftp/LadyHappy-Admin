@@ -8,7 +8,7 @@ import com.egoriku.config.store.ConfigStoreFactory
 import org.koin.dsl.module
 
 val configModule = module {
-    factory { ConfigRepository() }
+    factory { ConfigRepository(httpClient = get()) }
 
     factory<ConfigComponent> { (componentContext: ComponentContext, onBack: () -> Unit) ->
         ConfigComponentImpl(componentContext = componentContext, onBack = onBack)

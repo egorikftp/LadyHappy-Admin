@@ -13,10 +13,7 @@ koin = "3.2.0-beta-1"
 kotlin = "1.6.10"
 ktor = "1.6.8"
 material = "1.5.0"
-moshi = "1.13.0"
 mvikotlin = "2.0.4"
-retrofit = "2.9.0"
-retrosheet = "2.0.0-beta03"
 
 [libraries]
 plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "androidgradle" }
@@ -50,16 +47,8 @@ ktor-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 
-moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
-moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
-
 mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlin" }
 mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
 mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
-
-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-retrofit-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
-
-retrosheet = { module = "com.github.theapache64:retrosheet", version.ref = "retrosheet" }
 
 themedetector = "com.github.Dansoftowner:jSystemThemeDetector:3.6"

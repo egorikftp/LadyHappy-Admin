@@ -8,23 +8,16 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api(projects.common.retrosheetKmm)
+
                 implementation(libs.koin.core)
-                implementation(libs.kotlin.coroutines.core)
+
+                implementation(libs.ktor.core)
+                implementation(libs.ktor.cio)
+                implementation(libs.ktor.serialization)
             }
         }
 
-        val jvmMain by getting {
-            dependencies {
-                implementation(libs.retrosheet)
-
-                api(libs.moshi)
-                implementation(libs.moshi.kotlin)
-
-                api(libs.retrofit)
-                implementation(libs.retrofit.moshi)
-            }
-        }
-
-        jvmMain.dependsOn(commonMain)
+        val jvmMain by getting
     }
 }
