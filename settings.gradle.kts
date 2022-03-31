@@ -16,6 +16,7 @@ include(":android")
 include(":desktop")
 
 include(":common:network")
+include(":common:retrosheet-kmm")
 include(":common:theme")
 include(":common:utils")
 

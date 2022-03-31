@@ -43,7 +43,7 @@ internal class ConfigStoreFactory(
 
         private suspend fun loadConfig() {
             dispatch(Result.Loading)
-            dispatch(Result.Loaded(configRepository.loadConfig()))
+            dispatch(Result.Loaded(configRepository.load()))
         }
     }
 
