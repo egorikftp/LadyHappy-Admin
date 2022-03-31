@@ -20,7 +20,7 @@ plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref
 plugin-compose-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-jetbrains" }
 plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization-gradle = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-plugin-versions-gradle = "com.github.ben-manes:gradle-versions-plugin:0.41.0"
+plugin-versions-gradle = "com.github.ben-manes:gradle-versions-plugin:0.42.0"
 
 android-material = { module = "com.google.android.material:material", version.ref = "material" }
 
@@ -51,4 +51,4 @@ mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mviko
 mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
 mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
 
-themedetector = "com.github.Dansoftowner:jSystemThemeDetector:3.6"
+themedetector = "com.github.Dansoftowner:jSystemThemeDetector:3.8"
