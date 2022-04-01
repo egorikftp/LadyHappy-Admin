@@ -1,12 +1,10 @@
 package com.egoriku.config
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.essenty.instancekeeper.InstanceKeeper
-import com.arkivanov.essenty.instancekeeper.getOrCreate
-import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.extensions.coroutines.states
 import com.egoriku.config.ConfigComponent.Model
 import com.egoriku.config.store.ConfigStore
+import com.egoriku.utils.decompose.getStore
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -29,19 +27,4 @@ internal class ConfigComponentImpl(
     }
 
     override fun onCloseClicked() = onBack()
-}
-
-fun <T : Store<*, *, *>> InstanceKeeper.getStore(key: Any, factory: () -> T): T =
-    getOrCreate(key) { StoreHolder(factory()) }
-        .store
-
-inline fun <reified T : Store<*, *, *>> InstanceKeeper.getStore(noinline factory: () -> T): T =
-    getStore(T::class, factory)
-
-private class StoreHolder<T : Store<*, *, *>>(
-    val store: T
-) : InstanceKeeper.Instance {
-    override fun onDestroy() {
-        store.dispose()
-    }
 }

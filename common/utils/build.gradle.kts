@@ -36,8 +36,11 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.kotlin.coroutines.core)
                 implementation(compose.desktop.common)
+
+                implementation(libs.decompose)
+                implementation(libs.kotlin.coroutines.core)
+                implementation(libs.mvikotlin)
             }
         }
 
