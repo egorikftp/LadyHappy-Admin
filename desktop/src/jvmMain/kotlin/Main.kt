@@ -12,6 +12,8 @@ import theme.LadyHappyDesktopTheme
 
 @OptIn(ExperimentalDecomposeApi::class)
 fun main() {
+    applySystemProperties()
+
     initKoin()
 
     val lifecycle = LifecycleRegistry()
@@ -33,4 +35,9 @@ fun main() {
             }
         }
     }
+}
+
+private fun applySystemProperties() {
+    System.setProperty("apple.awt.application.appearance", "system")
+    System.setProperty("apple.laf.useScreenMenuBar", "true")
 }
