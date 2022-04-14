@@ -28,7 +28,7 @@ class MainComponentImpl(
         key = "Main",
         childFactory = { configuration, componentContext ->
             when (configuration) {
-                is Features -> Child.Features(component = featuresComponent())
+                is Features -> Child.Features(component = featuresComponent(componentContext))
                 is Config -> Child.Config(component = configComponent(componentContext))
             }
         }
@@ -42,10 +42,12 @@ class MainComponentImpl(
         router.pop()
     }
 
-    private fun featuresComponent(): FeaturesComponent = FeaturesComponentImpl(
-        onClick = {
-            router.push(Config)
-        })
+    private fun featuresComponent(componentContext: ComponentContext): FeaturesComponent {
+        return FeaturesComponentImpl(
+            componentContext = componentContext,
+            onClick = { router.push(Config) }
+        )
+    }
 
     override val routerState: Value<RouterState<*, Child>> = router.state
 

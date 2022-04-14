@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization")
     id("com.android.library")
     id("kotlin-parcelize")
     id("org.jetbrains.compose")
@@ -28,12 +29,21 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(projects.common.network)
+                implementation(projects.common.utils)
+
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)
 
                 implementation(libs.decompose)
                 implementation(libs.koin.core)
+
+                implementation(libs.ktor.cio)
+                implementation(libs.ktor.serialization)
+
+                implementation(libs.mvikotlin)
+                implementation(libs.mvikotlin.coroutines)
             }
         }
     }
