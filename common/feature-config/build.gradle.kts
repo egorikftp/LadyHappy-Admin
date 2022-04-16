@@ -18,15 +18,17 @@ kotlin {
                 implementation(compose.material)
 
                 implementation(libs.decompose)
-                implementation(libs.koin.core)
-                implementation(libs.mvikotlin)
-                implementation(libs.mvikotlin.coroutines)
 
-                implementation(libs.ktor.cio)
-                implementation(libs.ktor.core)
-                implementation(libs.ktor.serialization)
+                implementation(libs.koin.core)
 
                 implementation(libs.kotlinx.serialization)
+
+                implementation(libs.ktor.client.cio)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.serialization.json)
+
+                implementation(libs.mvikotlin)
+                implementation(libs.mvikotlin.coroutines)
             }
         }
 

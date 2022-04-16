@@ -37,10 +37,11 @@ kotlin {
                 implementation(compose.runtime)
 
                 implementation(libs.decompose)
+
                 implementation(libs.koin.core)
 
-                implementation(libs.ktor.cio)
-                implementation(libs.ktor.serialization)
+                implementation(libs.ktor.client.cio)
+                implementation(libs.ktor.serialization.json)
 
                 implementation(libs.mvikotlin)
                 implementation(libs.mvikotlin.coroutines)

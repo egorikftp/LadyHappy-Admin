@@ -5,6 +5,7 @@ import com.egoriku.network.Sheets.CATEGORIES
 import com.egoriku.retrosheetkmm.ktor.query
 import com.egoriku.retrosheetkmm.ktor.sheet
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.request.*
 
 class ConfigRepository(private val httpClient: HttpClient) {
@@ -12,13 +13,13 @@ class ConfigRepository(private val httpClient: HttpClient) {
     suspend fun load(): List<Config> {
         return httpClient.get {
             sheet(CATEGORIES)
-        }
+        }.body()
     }
 
     suspend fun load(category: Int): List<Config> {
         return httpClient.get {
             sheet("categories")
             query("SELECT * WHERE category_id = 1")
-        }
+        }.body()
     }
 }
