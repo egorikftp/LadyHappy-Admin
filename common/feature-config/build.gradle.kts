@@ -8,7 +8,7 @@ kotlin {
     jvm()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation(projects.common.network)
                 implementation(projects.common.utils)
@@ -31,7 +31,5 @@ kotlin {
                 implementation(libs.mvikotlin.coroutines)
             }
         }
-
-        val jvmMain by getting
     }
 }

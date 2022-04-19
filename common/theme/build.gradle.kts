@@ -34,7 +34,7 @@ kotlin {
     android()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation(compose.ui)
                 implementation(compose.material)

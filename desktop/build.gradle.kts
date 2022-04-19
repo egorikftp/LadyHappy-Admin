@@ -17,7 +17,7 @@ kotlin {
         withJava()
     }
     sourceSets {
-        val jvmMain by getting {
+        jvmMain {
             dependencies {
                 implementation(projects.common.featureRoot)
                 implementation(projects.common.theme)

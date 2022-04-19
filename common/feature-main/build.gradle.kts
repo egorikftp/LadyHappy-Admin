@@ -26,7 +26,7 @@ kotlin {
     android()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation(projects.common.featureConfig)
                 implementation(projects.common.featureFeatures)

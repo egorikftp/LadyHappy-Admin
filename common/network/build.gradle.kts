@@ -6,7 +6,7 @@ kotlin {
     jvm()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 api(projects.common.retrosheetKmm)
 
@@ -18,7 +18,5 @@ kotlin {
                 implementation(libs.ktor.serialization.json)
             }
         }
-
-        val jvmMain by getting
     }
 }

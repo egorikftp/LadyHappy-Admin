@@ -27,7 +27,7 @@ kotlin {
     android()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation(projects.common.network)
                 implementation(projects.common.utils)

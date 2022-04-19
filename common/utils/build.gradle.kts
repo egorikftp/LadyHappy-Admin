@@ -34,17 +34,19 @@ kotlin {
     android()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
-                implementation(compose.desktop.common)
+                dependencies {
+                    implementation(compose.desktop.common)
 
-                implementation(libs.decompose)
-                implementation(libs.kotlin.coroutines.core)
-                implementation(libs.mvikotlin)
+                    implementation(libs.decompose)
+                    implementation(libs.kotlin.coroutines.core)
+                    implementation(libs.mvikotlin)
+                }
             }
         }
 
-        val androidMain by getting {
+        androidMain {
             dependencies {
                 implementation(libs.androidx.window)
                 implementation(libs.kotlin.coroutines.android)
