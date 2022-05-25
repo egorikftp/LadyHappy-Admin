@@ -32,6 +32,9 @@ kotlin {
                 implementation(projects.common.network)
                 implementation(projects.common.utils)
 
+                implementation(libs.kotlin.coroutines.core)
+                implementation(libs.kotlin.coroutines.swing)
+
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)

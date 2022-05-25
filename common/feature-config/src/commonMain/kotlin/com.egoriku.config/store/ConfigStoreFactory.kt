@@ -7,7 +7,7 @@ import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.extensions.coroutines.SuspendExecutor
 import com.egoriku.config.repository.ConfigRepository
 import com.egoriku.config.store.ConfigStore.*
-import com.egoriku.utils.AppCoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
 internal class ConfigStoreFactory(
     private val storeFactory: StoreFactory,
@@ -29,7 +29,7 @@ internal class ConfigStoreFactory(
                 InitialAction,
                 State,
                 Result,
-                Nothing>(AppCoroutineDispatcher.Main) {
+                Nothing>(Dispatchers.Main) {
 
         override suspend fun executeIntent(intent: Intent, getState: () -> State) {
             super.executeIntent(intent, getState)

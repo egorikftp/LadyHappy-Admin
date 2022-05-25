@@ -6,7 +6,7 @@ import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.extensions.coroutines.SuspendExecutor
 import com.egoriku.features.data.repository.FeaturesRepository
-import com.egoriku.utils.AppCoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
 internal class FeaturesStoreFactory(
     private val storeFactory: StoreFactory,
@@ -32,7 +32,7 @@ internal class FeaturesStoreFactory(
                 InitialAction,
                 FeaturesStore.State,
                 FeaturesStore.Result,
-                Nothing>(AppCoroutineDispatcher.Main) {
+                Nothing>(Dispatchers.Main) {
 
         override suspend fun executeIntent(
             intent: FeaturesStore.Intent,

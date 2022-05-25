@@ -40,7 +40,6 @@ kotlin {
                     implementation(compose.desktop.common)
 
                     implementation(libs.decompose)
-                    implementation(libs.kotlin.coroutines.core)
                     implementation(libs.mvikotlin)
                 }
             }
