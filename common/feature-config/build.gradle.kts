@@ -21,6 +21,9 @@ kotlin {
 
                 implementation(libs.koin.core)
 
+                implementation(libs.kotlin.coroutines.core)
+                implementation(libs.kotlin.coroutines.swing)
+
                 implementation(libs.kotlinx.serialization)
 
                 implementation(libs.ktor.client.cio)

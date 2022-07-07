@@ -28,6 +28,8 @@ androidx-core = "androidx.core:core-ktx:1.7.0"
 androidx-viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 androidx-window = "androidx.window:window:1.0.0"
 
+coil = "io.coil-kt:coil-compose:2.1.0"
+
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-extensions = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
 

@@ -15,6 +15,7 @@ rootProject.name = "Ladyhappy-Admin"
 include(":android")
 include(":desktop")
 
+include(":common:imageloader")
 include(":common:network")
 include(":common:retrosheet-kmm")
 include(":common:theme")

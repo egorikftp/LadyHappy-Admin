@@ -1,10 +1,8 @@
 package com.egoriku.features
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
@@ -14,8 +12,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.egoriku.imageloader.remoteImagePainter
 import com.egoriku.utils.screen.WindowSize
 import com.egoriku.utils.screen.rememberWindowSize
 
@@ -37,7 +37,20 @@ fun FeaturesContent(featuresComponent: FeaturesComponent) {
     ) {
         items(state.features) {
             Card(modifier = Modifier.padding(16.dp), elevation = 4.dp, onClick = {}) {
-                Column(modifier = Modifier.padding(40.dp)) {
+                Column(
+                    modifier = Modifier.padding(40.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    if(it.iconUrl.isNotEmpty()) {
+                        Image(
+                            modifier = Modifier
+                                .height(48.dp)
+                                .width(48.dp),
+                            painter = remoteImagePainter(it.iconUrl),
+                            contentDescription = ""
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(16.dp))
                     Text(text = it.sheetName)
                 }
             }
