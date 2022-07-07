@@ -1,6 +1,6 @@
 package com.egoriku.features.data
 
-import com.egoriku.retrosheetkmm.serializer.RetroBooleanSerializer
+import com.egoriku.ktor.retrosheet.serializer.RetroBooleanSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

@@ -1,9 +1,9 @@
 package com.egoriku.config.repository
 
 import com.egoriku.config.domain.Config
+import com.egoriku.ktor.retrosheet.ktor.query
+import com.egoriku.ktor.retrosheet.ktor.sheet
 import com.egoriku.network.Sheets.CATEGORIES
-import com.egoriku.retrosheetkmm.ktor.query
-import com.egoriku.retrosheetkmm.ktor.sheet
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*

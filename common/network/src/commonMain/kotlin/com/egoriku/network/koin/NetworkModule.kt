@@ -1,9 +1,9 @@
 package com.egoriku.network.koin
 
+import com.egoriku.ktor.retrosheet.ktor.defaultSheetUrl
+import com.egoriku.ktor.retrosheet.ktor.plugin.RetrosheetPlugin
+import com.egoriku.ktor.retrosheet.ktor.plugin.configuration
 import com.egoriku.network.Sheets.CATEGORIES
-import com.egoriku.retrosheetkmm.ktor.defaultSheetUrl
-import com.egoriku.retrosheetkmm.ktor.plugin.RetrosheetPlugin
-import com.egoriku.retrosheetkmm.ktor.plugin.configuration
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.*
