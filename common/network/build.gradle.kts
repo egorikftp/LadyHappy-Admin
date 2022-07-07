@@ -8,7 +8,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.common.retrosheetKmm)
+                api(projects.common.ktorRetrosheet)
 
                 implementation(libs.koin.core)
 
