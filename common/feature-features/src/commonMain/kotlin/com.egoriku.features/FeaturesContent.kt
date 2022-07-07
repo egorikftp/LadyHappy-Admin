@@ -35,7 +35,14 @@ fun FeaturesContent(featuresComponent: FeaturesComponent) {
         contentPadding = PaddingValues(16.dp)
     ) {
         items(state.features) {
-            Card(modifier = Modifier.padding(16.dp), elevation = 4.dp, onClick = {}) {
+            Card(
+                modifier = Modifier.padding(16.dp),
+                elevation = 4.dp,
+                enabled = it.isAvailable,
+                onClick = {
+                    featuresComponent.onFeatureClick(it.sheetName)
+                }
+            ) {
                 Column(
                     modifier = Modifier.padding(40.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -50,7 +57,7 @@ fun FeaturesContent(featuresComponent: FeaturesComponent) {
                         )
                     }
                     Spacer(modifier = Modifier.height(16.dp))
-                    Text(text = it.sheetName)
+                    Text(text = it.featureName)
                 }
             }
         }

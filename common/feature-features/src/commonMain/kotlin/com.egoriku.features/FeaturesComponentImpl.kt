@@ -12,7 +12,7 @@ import org.koin.core.component.get
 
 class FeaturesComponentImpl(
     componentContext: ComponentContext,
-    private val onClick: () -> Unit
+    private val onClick: (String) -> Unit
 ) : FeaturesComponent, KoinComponent, ComponentContext by componentContext {
 
     private val store = instanceKeeper.getStore { get<FeaturesStore>() }
@@ -21,7 +21,7 @@ class FeaturesComponentImpl(
         FeaturesComponent.Model(
             features = state.items.map { item ->
                 FeaturesItem(
-                    featureId = item.featureId,
+                    featureName = item.featureName,
                     sheetName = item.sheetName,
                     iconUrl = item.iconUrl,
                     isAvailable = item.isAvailable
@@ -31,7 +31,7 @@ class FeaturesComponentImpl(
         )
     }
 
-    override fun onFeatureClick() {
-        onClick()
+    override fun onFeatureClick(sheetName: String) {
+        onClick(sheetName)
     }
 }

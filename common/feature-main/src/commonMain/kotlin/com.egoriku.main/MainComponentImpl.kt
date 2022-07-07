@@ -45,7 +45,11 @@ class MainComponentImpl(
     private fun featuresComponent(componentContext: ComponentContext): FeaturesComponent {
         return FeaturesComponentImpl(
             componentContext = componentContext,
-            onClick = { router.push(Config) }
+            onClick = { sheetName ->
+                if (sheetName == "categories") {
+                    router.push(Config)
+                }
+            }
         )
     }
 

@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Features(
-    @SerialName("feature_id")
-    val featureId: Int,
+    @SerialName("feature_name")
+    val featureName: String,
 
     @SerialName("sheet_name")
     val sheetName: String,

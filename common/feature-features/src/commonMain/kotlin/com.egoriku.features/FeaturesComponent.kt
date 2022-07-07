@@ -7,7 +7,7 @@ interface FeaturesComponent {
 
     val model: Flow<Model>
 
-    fun onFeatureClick()
+    fun onFeatureClick(sheetName: String)
 
     data class Model(
         val features: List<FeaturesItem> = emptyList(),
